@@ -1,0 +1,307 @@
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Свадьба Кирилла и Алёны </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--primary-color: #6B705C;
+--accent-color: #A5A58D;
+--bg-color: #F9F7F2;
+--text-color: #333333;
+--white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+line-height: 1.6;
+text-align: center;
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+background: var(--white);
+box-shadow: 0 0 30px rgba(0,0,0,0.05);
+overflow: hidden;
+}
+
+/* HERO */
+.hero {
+padding: 80px 20px;
+background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('main.jpg');
+background-size: cover;
+background-position: center;
+color: var(--white);
+min-height: 85vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.hero p { font-size: 1.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+.hero h1 { font-size: 4.5rem; margin: 10px 0; line-height: 1.1; }
+.date-badge {
+margin-top: 30px;
+padding: 12px 40px;
+border: 2px solid var(--white);
+font-size: 1.3rem;
+letter-spacing: 4px;
+text-transform: uppercase;
+}
+
+section { padding: 70px 30px; }
+h2 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 40px; }
+
+/* ТАЙМЕР */
+.timer { display: flex; justify-content: center; gap: 25px; margin-top: 40px; flex-wrap: wrap; }
+.timer-item { background: var(--bg-color); padding: 20px; min-width: 90px; border-radius: 8px; }
+.timer-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: bold; color: var(--primary-color); line-height: 1; }
+.timer-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+
+/* ПРОГРАММА */
+.timeline { max-width: 600px; margin: 0 auto; text-align: left; }
+.event-row { display: flex; margin-bottom: 35px; align-items: baseline; border-bottom: 1px dashed #eee; padding-bottom: 20px; }
+.event-row:last-child { border-bottom: none; }
+.time { font-family: 'Cormorant Garamond', serif; font-weight: bold; min-width: 100px; color: var(--primary-color); font-size: 1.8rem; }
+.desc strong { display: block; font-size: 1.2rem; margin-bottom: 5px; }
+
+/* НАША ИСТОРИЯ */
+.story-item {
+display: flex;
+align-items: center;
+gap: 25px;
+text-align: left;
+}
+.story-item.reverse { flex-direction: row-reverse; }
+.story-img {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+object-fit: cover;
+flex-shrink: 0;
+border: 3px solid var(--accent-color);
+}
+.story-year {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.6rem;
+color: var(--primary-color);
+font-weight: bold;
+}
+.story-title { font-size: 1.1rem; display: block; margin: 5px 0; }
+.story-text { font-size: 0.95rem; color: #555; }
+
+/* ДРЕСС-КОД */
+.dresscode-img {
+width: 100%;
+max-width: 500px;
+height: auto;
+border-radius: 8px;
+margin: 30px auto;
+display: block;
+object-fit: cover;
+}
+
+/* RSVP */
+.rsvp-section { background-color: var(--primary-color); color: white; padding: 80px 30px; }
+.rsvp-section h2 { color: white; margin-bottom: 20px; }
+.rsvp-deadline {
+display: inline-block;
+margin-top: 25px;
+padding: 15px 30px;
+border: 1px solid rgba(255,255,255,0.5);
+border-radius: 50px;
+font-size: 1.1rem;
+}
+
+footer { padding: 40px; font-size: 0.9rem; opacity: 0.8; }
+
+/* АДАПТИВ */
+@media (max-width: 600px) {
+.hero h1 { font-size: 3rem; }
+.hero p { font-size: 1.1rem; }
+.time { min-width: 80px; font-size: 1.4rem; }
+section { padding: 50px 20px; }
+
+.story-item, .story-item.reverse {
+flex-direction: column !important;
+text-align: center !important;
+}
+.story-img { margin: 0 auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<header class="hero">
+<p>Мы приглашаем вас на нашу свадьбу</p>
+<h1>Кирилл & Алёна</h1>
+<div class="date-badge">4 Сентября 2026</div>
+</header>
+
+<!-- ОБРАЩЕНИЕ И ТАЙМЕР -->
+<section id="about">
+<h2>Дорогие гости!</h2>
+<p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto;">
+Мы будем безмерно счастливы видеть вас в этот важный для нас день.
+Ваше тепло и улыбки сделают наш праздник по-настоящему особенным.
+</p>
+
+<div class="timer" id="countdown">
+<div class="timer-item"><div class="timer-num" id="days">00</div><div class="timer-label">дней</div></div>
+<div class="timer-item"><div class="timer-num" id="hours">00</div><div class="timer-label">часов</div></div>
+<div class="timer-item"><div class="timer-num" id="minutes">00</div><div class="timer-label">минут</div></div>
+</div>
+</section>
+
+<!-- ПРОГРАММА ДНЯ -->
+<section id="schedule" style="background-color: #fcfbf9;">
+<h2>Программа дня</h2>
+<div class="timeline">
+<div class="event-row">
+<div class="time">16:00</div>
+<div class="desc">
+<strong>Сбор гостей</strong>
+Welcome-зона, легкие закуски, знакомство и общение
+</div>
+</div>
+<div class="event-row">
+<div class="time">16:30</div>
+<div class="desc">
+<strong>Торжественная церемония</strong>
+Момент, когда мы скажем друг другу «Да»
+</div>
+</div>
+<div class="event-row">
+<div class="time">17:00</div>
+<div class="desc">
+<strong>Праздничный ужин</strong>
+Банкет, тосты, танцы и веселье до позднего вечера
+</div>
+</div>
+</div>
+</section>
+
+<!-- МЕСТО ПРОВЕДЕНИЯ -->
+<section id="location">
+<h2>Место проведения</h2>
+<p style="font-size: 1.3rem; margin-bottom: 10px;">📍 Глэмпинг "Иволна"</p>
+<p>г. Ревда, ул. Возмутителей, д. 93</p>
+</section>
+
+<!-- НАША ИСТОРИЯ -->
+<section id="story" style="background-color: #fcfbf9;">
+<h2>Наша история</h2>
+
+<div style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
+
+<!-- СОБЫТИЕ 1 -->
+<div class="story-item">
+<img class="story-img" src="event1.jpg" alt="Начало отношений">
+<div>
+<div class="story-year">10.02.2021</div>
+<strong class="story-title">Начало отношений</strong>
+<p class="story-text">Мы только начинали узнавать друг друга: любимые вкусы, странные привычки, самые сокровенные мечты — и каждый новый кусочек казался бесценным</p>
+</div>
+</div>
+
+<!-- СОБЫТИЕ 2 -->
+<div class="story-item reverse">
+<img class="story-img" src="event2.jpg" alt="Первое путешествие">
+<div>
+<div class="story-year">30.07.2023</div>
+<strong class="story-title">Первое путешествие</strong>
+<p class="story-text">Мы бродили по Тюмени, смеялись над пустяками и ловили моменты, когда время будто замирает — и понимали, что это и есть самое ценное </p>
+</div>
+</div>
+
+<!-- СОБЫТИЕ 3 -->
+<div class="story-item">
+<img class="story-img" src="event3.jpg" alt="Предложение">
+<div>
+<div class="story-year">03.07.2026</div>
+<strong class="story-title">Предложение</strong>
+<p class="story-text">Кирилл сделал предложение в поле на фоне красивого заката. Алёна сказала «Да» ещё до того, как он закончил фразу 💍</p>
+</div>
+</div>
+
+<!-- СОБЫТИЕ 4 -->
+<div class="story-item reverse">
+<img class="story-img" src="event4.jpg" alt="Свадьба">
+<div>
+<div class="story-year">04.09.2026</div>
+<strong class="story-title">Свадьба!</strong>
+<p class="story-text">И вот мы здесь. Спасибо, что вы часть нашей истории ❤️</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ДРЕСС-КОД -->
+<section id="dresscode">
+<h2>Дресс-код</h2>
+<p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto;">
+Мы будем благодарны, если вы поддержите цветовую гамму нашей свадьбы в своих нарядах.
+Это поможет создать гармоничную атмосферу праздника.
+Белый цвет просим оставить для невесты 🤍
+</p>
+<img class="dresscode-img" src="dresscode.jpg" alt="Пример дресс-кода">
+</section>
+
+<!-- ПОДТВЕРЖДЕНИЕ УЧАСТИЯ -->
+<section class="rsvp-section" id="rsvp">
+<h2>Подтвердите участие</h2>
+<p style="font-size: 1.2rem; max-width: 550px; margin: 0 auto;">
+Нам очень важно знать заранее, кто сможет разделить с нами этот день.
+Пожалуйста, сообщите о вашем решении.
+</p>
+<div class="rsvp-deadline">
+Просим ответить до 15 Августа 2026
+</div>
+</section>
+
+<footer>
+<p>С любовью, Кирилл & Алёна • 2026</p>
+</footer>
+</div>
+
+<script>
+// 4 Сентября 2026, 16:00 (месяц 8 = сентябрь)
+const weddingDate = new Date(2026, 8, 4, 16, 0, 0).getTime();
+
+function updateTimer() {
+const now = new Date().getTime();
+const distance = weddingDate - now;
+
+if (distance < 0) {
+document.getElementById("countdown").innerHTML = "<h3 style='color:var(--primary-color)'>Мы уже женаты! 💍</h3>";
+return;
+}
+
+document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
+</script>
+
+</body>
+</html>
